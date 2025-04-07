@@ -47,6 +47,12 @@
                 <span class="side-bar-item-caption">Profile</span>
             </Link>
 
+            <Link href="/sales-reports" class="block p-2 text-gray-700 hover:bg-gray-100">
+  
+  <!-- <span class="side-bar-item-icon"><i class="fa fa-sign-out-alt text-green" /></span> -->
+                <!-- <span class="side-bar-item-caption">📊 Sales Reports</span> -->
+</Link>
+
             <Link href="/user-logout" class="side-bar-item">
                 <span class="side-bar-item-icon"><i class="fa fa-sign-out-alt text-green" /></span>
                 <span class="side-bar-item-caption">Logout</span>

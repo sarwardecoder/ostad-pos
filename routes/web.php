@@ -27,7 +27,7 @@ Route::post('/verify-otp', [UserController::class, 'VerifyOTP'])->name('VerifyOT
 
 
 
-Route::middleware(SessionAuthenticate::class)->group(function(){
+Route::middleware(SessionAuthenticate::class)->group(function () {
     //reset password
     Route::post('/reset-password', [UserController::class, 'ResetPassword']);
 
@@ -75,14 +75,19 @@ Route::middleware(SessionAuthenticate::class)->group(function(){
     Route::get('/dashboard-summary', [DashboardController::class, 'DashboardSummary'])->name('DashboardSummary');
 
     //Resetpassword page
-    Route::get('/reset-password',[UserController::class, 'ResetPasswordPage']);
+    Route::get('/reset-password', [UserController::class, 'ResetPasswordPage']);
 
     Route::get('/ProfilePage', [UserController::class, 'ProfilePage']);
     Route::post('/user-update', [UserController::class, 'UserUpdate']);
 });
 
 //Pages all routes
-Route::get('/login',[UserController::class, 'LoginPage'])->name('login.page');
-Route::get('/registration',[UserController::class, 'RegistrationPage'])->name('registration.page');
-Route::get('/send-otp',[UserController::class, 'SendOTPPage'])->name('sendotp.page');
-Route::get('/verify-otp',[UserController::class, 'VerifyOTPPage'])->name('VerifyOTPPage');
+Route::get('/login', [UserController::class, 'LoginPage'])->name('login.page');
+Route::get('/registration', [UserController::class, 'RegistrationPage'])->name('registration.page');
+Route::get('/send-otp', [UserController::class, 'SendOTPPage'])->name('sendotp.page');
+Route::get('/verify-otp', [UserController::class, 'VerifyOTPPage'])->name('VerifyOTPPage');
+//Reports and analytics
+
+Route::get('/sales-reports', function () {
+    return Inertia::render('SalesReportPage');
+});
