@@ -20,7 +20,11 @@
                         </div>
                         <!-- Invoice Info Section -->
                         <div class="col-4 text-right">
+<<<<<<< HEAD
                             <img class="w-40" src="../../Assets/img/logo.png" alt="Company Logo">
+=======
+                            <img class="w-40" src="../../Assets/img/logo.svg" alt="Company Logo">
+>>>>>>> 1f3518a7d2ebb13371cf8dc62df0ea6533bd7e38
                             <p class="mb-1"><strong>Invoice</strong></p>
                             <p class="mb-1">Date: {{ new Date().toLocaleDateString() }}</p>
                         </div>
@@ -74,6 +78,10 @@
 
 <script setup>
 import { defineProps, defineEmits } from 'vue'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1f3518a7d2ebb13371cf8dc62df0ea6533bd7e38
 const props = defineProps({
     customer: Object
 })

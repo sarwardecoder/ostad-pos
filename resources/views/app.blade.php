@@ -11,4 +11,7 @@
     @inertia
   </body>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1f3518a7d2ebb13371cf8dc62df0ea6533bd7e38
