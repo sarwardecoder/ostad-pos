@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2025 at 11:51 AM
+-- Generation Time: Apr 07, 2025 at 09:19 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -69,7 +69,10 @@ INSERT INTO `categories` (`id`, `name`, `user_id`, `created_at`, `updated_at`) V
 (6, 'Laptop', 2, '2025-04-03 13:18:17', '2025-04-03 13:18:17'),
 (7, 'Motorcycle', 2, '2025-04-03 13:18:25', '2025-04-03 13:18:25'),
 (8, 'PC', 2, '2025-04-03 13:18:31', '2025-04-03 13:18:31'),
-(9, 'PC', 1, '2025-04-03 14:08:15', '2025-04-03 14:08:15');
+(9, 'PC', 1, '2025-04-03 14:08:15', '2025-04-03 14:08:15'),
+(10, 'Cars', 1, '2025-04-05 23:46:06', '2025-04-05 23:46:06'),
+(11, 'Home Appliances', 1, '2025-04-05 23:46:23', '2025-04-05 23:46:23'),
+(12, 'EV Cars', 3, '2025-04-07 00:06:16', '2025-04-07 00:09:26');
 
 -- --------------------------------------------------------
 
@@ -95,7 +98,9 @@ INSERT INTO `customers` (`id`, `name`, `email`, `mobile`, `user_id`, `created_at
 (1, 'Jakia', 'jakia.parvin@yahoo.com', '123456', 1, '2025-04-02 20:45:52', '2025-04-02 20:45:52'),
 (2, 'Araf', 'araf@gmail.com', '321654', 1, '2025-04-02 20:49:35', '2025-04-02 20:49:35'),
 (4, 'bulbul', 'bulbul@gmail.com', '1717463000', 1, '2025-04-02 20:50:16', '2025-04-02 20:50:16'),
-(5, 'Rahim', 'rahim@example.com', '123456', 2, '2025-04-03 13:17:27', '2025-04-03 13:17:27');
+(5, 'Rahim', 'rahim@example.com', '123456', 2, '2025-04-03 13:17:27', '2025-04-03 13:17:27'),
+(6, 'Jiyon', 'jiyon@gmail.com', '123456', 1, '2025-04-05 23:47:39', '2025-04-05 23:47:39'),
+(7, 'Bulbul', 'buls@gmail.com', '01717463000', 3, '2025-04-07 00:06:42', '2025-04-07 00:10:25');
 
 -- --------------------------------------------------------
 
@@ -139,7 +144,10 @@ INSERT INTO `invoices` (`id`, `total`, `discount`, `vat`, `payable`, `user_id`, 
 (1, '421998', '8439.96', '21099.9', '434657.94', 1, 1, '2025-04-02 20:51:33', '2025-04-02 20:51:33'),
 (2, '900000', '9000', '45000', '936000', 1, 4, '2025-04-03 13:09:26', '2025-04-03 13:09:26'),
 (3, '750000', '200', '37500', '787300', 2, 5, '2025-04-03 13:20:33', '2025-04-03 13:20:33'),
-(4, '632997', '0', '0', '0', 1, 2, '2025-04-03 13:22:39', '2025-04-03 13:22:39');
+(4, '632997', '0', '0', '0', 1, 2, '2025-04-03 13:22:39', '2025-04-03 13:22:39'),
+(5, '2512700', '50254', '125635', '2462446', 1, 4, '2025-04-05 23:50:54', '2025-04-05 23:50:54'),
+(6, '8050999', '161019.98', '402549.95', '8292528.97', 3, 7, '2025-04-07 00:11:47', '2025-04-07 00:11:47'),
+(7, '2512700', '10000', '125635', '2628335', 1, 1, '2025-04-07 00:16:54', '2025-04-07 00:16:54');
 
 -- --------------------------------------------------------
 
@@ -166,7 +174,10 @@ INSERT INTO `invoice_products` (`id`, `invoice_id`, `product_id`, `user_id`, `qt
 (1, 1, 1, 1, '2', '210999', '2025-04-02 20:51:33', '2025-04-02 20:51:33'),
 (2, 2, 2, 1, '6', '150000', '2025-04-03 13:09:26', '2025-04-03 13:09:26'),
 (3, 3, 3, 2, '3', '250000', '2025-04-03 13:20:33', '2025-04-03 13:20:33'),
-(4, 4, 1, 1, '3', '210999', '2025-04-03 13:22:39', '2025-04-03 13:22:39');
+(4, 4, 1, 1, '3', '210999', '2025-04-03 13:22:39', '2025-04-03 13:22:39'),
+(5, 5, 6, 1, '1', '2512700', '2025-04-05 23:50:54', '2025-04-05 23:50:54'),
+(6, 6, 7, 3, '1', '8050999', '2025-04-07 00:11:47', '2025-04-07 00:11:47'),
+(7, 7, 6, 1, '1', '2512700', '2025-04-07 00:16:54', '2025-04-07 00:16:54');
 
 -- --------------------------------------------------------
 
@@ -267,7 +278,11 @@ INSERT INTO `products` (`id`, `user_id`, `category_id`, `name`, `price`, `unit`,
 (1, 1, 1, 'Iphone 16 Pro', '210999', '0', 'uploads/1743760413.png', '2025-04-02 20:48:25', '2025-04-04 03:53:33'),
 (2, 1, 1, 'Iphone 14', '150000', '4', 'uploads/1743648539.png', '2025-04-02 20:48:59', '2025-04-03 13:09:26'),
 (3, 2, 5, 'Iphone 16 Pro', '250000', '3', 'uploads/1743707939.png', '2025-04-03 13:18:59', '2025-04-03 13:20:33'),
-(4, 2, 5, 'Iphone 14', '180000', '15', 'uploads/1743707967.png', '2025-04-03 13:19:27', '2025-04-03 13:19:27');
+(4, 2, 5, 'Iphone 14', '180000', '15', 'uploads/1743707967.png', '2025-04-03 13:19:27', '2025-04-03 13:19:27'),
+(5, 1, 10, 'Lambo Huracan premium', '1525999', '6', 'uploads/1743918516.png', '2025-04-05 23:48:36', '2025-04-05 23:48:36'),
+(6, 1, 10, 'Lambo Aventador', '2512700', '0', 'uploads/1743918562.png', '2025-04-05 23:49:22', '2025-04-07 00:16:54'),
+(7, 3, 12, 'Tesla Exclusive CyberTruck', '8050999', '1', 'uploads/1744006058.png', '2025-04-07 00:07:38', '2025-04-07 00:11:47'),
+(9, 1, 1, 'Iphone 16 Pro', '250000', '6', 'uploads/1744006541.png', '2025-04-07 00:15:41', '2025-04-07 00:15:41');
 
 -- --------------------------------------------------------
 
@@ -289,8 +304,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('5EHxfgs2IbjgxpVoummmRsoVmltXPRFDOjZlURkB', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieGxPVGVEaHYxNnhZMmVRSXN2bWcwa0gyMFdZMEpXemJXQmRsWXJhRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1743724340),
-('zg5xFLUXkjipgnBPRyFCNbIIqYpb0BnkvIyhaR3Z', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicEZOZnhIN1VuWXhVNW1tYmhSblkwaVR4OFlVc3hrWTlzTUJ2Wm9BNSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9EYXNoYm9hcmRQYWdlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1OiJlbWFpbCI7czoxNzoic2Fyd2FyM0BnbWFpbC5jb20iO3M6NzoidXNlcl9pZCI7aToxO30=', 1743766023);
+('tJNYIcJyPDelmP855m8zAkfOhS0MbyZXHF4dQ2lC', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0', 'YToyOntzOjY6Il9mbGFzaCI7YToyOntzOjM6Im5ldyI7YTowOnt9czozOiJvbGQiO2E6MDp7fX1zOjY6Il90b2tlbiI7czo0MDoiS2pzYlJSbGpKYnBhU3lBUWMwb0lldUdiM1lUd2Fxcll0NVNHNnRqNyI7fQ==', 1744006713);
 
 -- --------------------------------------------------------
 
@@ -316,8 +330,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `otp`, `password`, `mobile`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Sarwar', 'sarwar3@gmail.com', NULL, '0', '123456', '01711081672', NULL, '2025-04-02 20:41:10', '2025-04-03 14:07:00'),
-(2, 'rakib ahmed', 'rakib@example.com', NULL, '0', '123456', '01787772000', NULL, '2025-04-03 13:16:00', '2025-04-03 13:20:54');
+(1, 'Sarwar', 'sarwar3@gmail.com', NULL, '0', '654321', '01711081672', NULL, '2025-04-02 20:41:10', '2025-04-07 00:18:29'),
+(2, 'rakib ahmed', 'rakib@example.com', NULL, '0', '123456', '01787772000', NULL, '2025-04-03 13:16:00', '2025-04-03 13:20:54'),
+(3, 'Araf', 'araf@gmail.com', NULL, '0', '123456', '123456', NULL, '2025-04-07 00:05:18', '2025-04-07 00:05:18');
 
 --
 -- Indexes for dumped tables
@@ -429,13 +444,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -447,13 +462,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `invoice_products`
 --
 ALTER TABLE `invoice_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -471,13 +486,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
